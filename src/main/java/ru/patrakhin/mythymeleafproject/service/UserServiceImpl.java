@@ -3,6 +3,7 @@ package ru.patrakhin.mythymeleafproject.service;
 import ru.patrakhin.mythymeleafproject.model.User;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import ru.patrakhin.mythymeleafproject.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {
