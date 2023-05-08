@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Content</title>
 </head>
 <body>
-
+<div th:fragment="content">
+  <h1>Welcome to MyThymeleafProject!</h1>
+  <p>We are glad to have you as a visitor.</p>
+</div>
 </body>
 </html>

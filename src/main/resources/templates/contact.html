@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Contact</title>
 </head>
 <body>
-$END$
+<header>
+  <nav>
+    <ul>
+      <li><a th:href="@{/}">Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1>Contact</h1>
+  <p>My contact information:</p>
+  <ul>
+    <li>Email: patrakhin2010@gmail.com</li>
+    <li>GitHub: example</li>
+    <li>Linkedin: example</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2023 Andrey Patrakhin</p>
+</footer>
 </body>
 </html>

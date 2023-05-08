@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8"/>
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-$END$
+<nav>
+    <ul>
+        <li><a href="/" th:text="#{home}">Home</a></li>
+        <li><a href="/learning" th:text="#{learning}">Learning</a></li>
+        <li><a href="/profile" th:text="#{profile}">Profile</a></li>
+        <li><a href="/logout" th:text="#{logout}">Logout</a></li>
+    </ul>
+</nav>
+<h1 th:text="#{user.list}">User List</h1>
+<table>
+    <thead>
+    <tr>
+        <th th:text="#{user.id}">ID</th>
+        <th th:text="#{user.username}">Username</th>
+        <th th:text="#{user.role}">Role</th>
+        <th th:text="#{user.actions}">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.username}">username</td>
+        <td th:text="${user.role}">user</td>
+        <td>
+            <a th:href="@{'/users/' + ${user.id} + '/edit'}" th:text="#{user.edit}">Edit</a>
+            <a th:href="@{'/users/' + ${user.id} + '/delete'}" th:text="#{user.delete}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a href="/users/new" th:text="#{user.new}">New User</a>
+</div>
 </body>
 </html>

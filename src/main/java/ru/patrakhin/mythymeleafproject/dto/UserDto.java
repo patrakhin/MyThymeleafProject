@@ -1,2 +1,4 @@
-package ru.patrakhin.mythymeleafproject.dto;public class UserDto {
+package ru.patrakhin.mythymeleafproject.dto;
+
+public class UserDto {
 }

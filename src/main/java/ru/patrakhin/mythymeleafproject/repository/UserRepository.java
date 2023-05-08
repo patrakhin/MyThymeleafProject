@@ -1,2 +1,4 @@
-package ru.patrakhin.mythymeleafproject.repository;public class UserRepository {
+package ru.patrakhin.mythymeleafproject.repository;
+
+public class UserRepository {
 }
